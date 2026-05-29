@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import DashboardLayout from '../../components/layouts/DashboardLayout'
+import DashBoardLayout from '../../components/layouts/DashBoardLayout'
 import { useNavigate } from 'react-router-dom';
 import axiosInstance from '../../utils/axiosInstance';
 import { API_PATHS } from '../../utils/apiPaths';
@@ -52,7 +52,7 @@ const MyTask = () => {
 
 
   return (
-    <DashboardLayout activeMenu="My Tasks" >
+    <DashBoardLayout activeMenu="My Tasks" >
       <div className='my-5'>
         <div className='flex flex-col md:flex-row md:items-center justify-between'>
           <h2 className='text-xl md:text-xl font-medium'>My Task</h2>
@@ -90,7 +90,7 @@ const MyTask = () => {
 
         </div>
       </div>
-    </DashboardLayout >
+    </DashBoardLayout >
   )
 }
 

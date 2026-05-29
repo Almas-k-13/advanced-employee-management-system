@@ -2,7 +2,7 @@ import toast from "react-hot-toast";
 import React, { useEffect, useState } from "react";
 import axiosInstance from "../../utils/axiosInstance";
 import { API_PATHS } from "../../utils/apiPaths";
-import DashboardLayout from "../../components/layouts/DashBoardLayout";
+import DashBoardLayout from "../../components/layouts/DashBoardLayout";
 
 const ManageAdmin = () => {
   const [admin, setAdmin] = useState(null);
@@ -77,7 +77,7 @@ const handleUpdate = async (e) => {
 };
 
   return (
-    <DashboardLayout activeMenu="Super Admin">
+    <DashBoardLayout activeMenu="Super Admin">
       <div className="mt-6">
         <h2 className="text-2xl font-semibold mb-6">Super Admin Profile</h2>
 
@@ -237,7 +237,7 @@ const handleUpdate = async (e) => {
           </>
         )}
       </div>
-    </DashboardLayout>
+    </DashBoardLayout>
   );
 };
 

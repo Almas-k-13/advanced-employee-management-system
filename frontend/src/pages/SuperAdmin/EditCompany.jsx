@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import DashboardLayout from "../../components/layouts/DashBoardLayout";
+import DashBoardLayout from "../../components/layouts/DashBoardLayout";
 import axiosInstance from "../../utils/axiosInstance";
 import { API_PATHS } from "../../utils/apiPaths";
 import { toast } from "react-hot-toast";
@@ -82,7 +82,7 @@ const EditCompany = () => {
 
 
   return (
-    <DashboardLayout activeMenu="Company">
+    <DashBoardLayout activeMenu="Company">
 
       <div className="p-6">
 
@@ -197,7 +197,7 @@ const EditCompany = () => {
 
       </div>
 
-    </DashboardLayout>
+    </DashBoardLayout>
   );
 };
 

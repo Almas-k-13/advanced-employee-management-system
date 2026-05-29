@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axiosInstance from "../../../utils/axiosInstance";
 import toast from "react-hot-toast";
-import DashboardLayout from "../../../components/layouts/DashBoardLayout";
+import DashBoardLayout from "../../../components/layouts/DashBoardLayout";
 
 const UpdateProfile = () => {
 
@@ -70,7 +70,7 @@ const UpdateProfile = () => {
   };
 
   return (
-    <DashboardLayout activeMenu="UpdateProfile">
+    <DashBoardLayout activeMenu="UpdateProfile">
 
       <div className="flex justify-center mt-10">
 
@@ -178,7 +178,7 @@ const UpdateProfile = () => {
 
       </div>
 
-    </DashboardLayout>
+    </DashBoardLayout>
   );
 };
 

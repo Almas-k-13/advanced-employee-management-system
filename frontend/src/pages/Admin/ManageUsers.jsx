@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import DashboardLayout from '../../components/layouts/DashBoardLayout';
+import DashBoardLayout from '../../components/layouts/DashBoardLayout';
 import axiosInstance from '../../utils/axiosInstance';
 import { API_PATHS } from '../../utils/apiPaths';
 import UserCard from '../../components/Cards/UserCard';
@@ -31,7 +31,7 @@ const ManageUsers = () => {
   const inactiveUsers = allUsers.filter(u => u.status === "Inactive").length;
 
   return (
-    <DashboardLayout activeMenu="Team Members">
+    <DashBoardLayout activeMenu="Team Members">
       <div className='mt-5 mb-10'>
 
         {/* Header */}
@@ -80,7 +80,7 @@ const ManageUsers = () => {
         </div>
 
       </div>
-    </DashboardLayout>
+    </DashBoardLayout>
   );
 };
 

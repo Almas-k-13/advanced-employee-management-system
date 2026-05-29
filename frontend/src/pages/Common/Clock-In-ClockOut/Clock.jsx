@@ -10,7 +10,7 @@ import { MoreVertical } from "lucide-react";
 import Input from '../../../components/Inputs/Input';
 
 import CalendarView from "./CalendarView";
-import DashboardLayout from "../../../components/layouts/DashBoardLayout";
+import DashBoardLayout from "../../../components/layouts/DashBoardLayout";
 
 
 
@@ -175,7 +175,7 @@ const Clock = () => {
 
 
   return (
-    <DashboardLayout activeMenu="Attendance">
+    <DashBoardLayout activeMenu="Attendance">
       <div className="min-h-screen bg-slate-100 p-6">
         {/* Header Right */}
         <div className="flex justify-end mb-6">
@@ -330,7 +330,7 @@ ${runningClock ? "bg-red-600 hover:bg-red-700" : "bg-blue-600 hover:bg-blue-700"
 
         </div>
       </div>
-    </DashboardLayout>
+    </DashBoardLayout>
   )
 }
 

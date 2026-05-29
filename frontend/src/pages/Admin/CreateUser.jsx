@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import DashboardLayout from "../../components/layouts/DashboardLayout";
+import DashBoardLayout from "../../components/layouts/DashBoardLayout";
 import axiosInstance from "../../utils/axiosInstance";
 import { API_PATHS } from "../../utils/apiPaths";
 import toast from "react-hot-toast";
@@ -176,7 +176,7 @@ const CreateUser = () => {
   };
 
   return (
-    <DashboardLayout activeMenu="Team Members">
+    <DashBoardLayout activeMenu="Team Members">
 
       <div className='mt-5'>
         <div className='grid grid-cols-1 md:grid-cols-4 mt-4'>
@@ -364,7 +364,7 @@ const CreateUser = () => {
         </div>
       </div>
 
-    </DashboardLayout>
+    </DashBoardLayout>
   );
 };
 

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import DashboardLayout from "../../components/layouts/DashBoardLayout";
+import DashBoardLayout from "../../components/layouts/DashBoardLayout";
 import { toast } from 'react-hot-toast';
 import axiosInstance from "../../utils/axiosInstance";
 import { API_PATHS } from "../../utils/apiPaths";
@@ -254,7 +254,7 @@ const CreateAdmin = () => {
   };
 
   return (
-    <DashboardLayout activeMenu="Company">
+    <DashBoardLayout activeMenu="Company">
 
       <div className="mt-6">
 
@@ -634,7 +634,7 @@ const CreateAdmin = () => {
 
       </div>
 
-    </DashboardLayout>
+    </DashBoardLayout>
   );
 };
 

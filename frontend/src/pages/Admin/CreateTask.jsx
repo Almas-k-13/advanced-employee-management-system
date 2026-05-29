@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
 import { useLocation, useNavigate } from "react-router-dom";
 import moment from "moment";
 import { LuTrash2 } from "react-icons/lu";
-import DashboardLayout from '../../components/layouts/DashboardLayout';
+import DashBoardLayout from '../../components/layouts/DashBoardLayout';
 import SelectDropdown from '../../components/Inputs/SelectDropdown';
 import SelectUsers from '../../components/Inputs/SelectUsers';
 import TodoListInput from '../../components/Inputs/TodoListInput';
@@ -205,7 +205,7 @@ const CreateTask = () => {
 
 
   return (
-    <DashboardLayout activeMenu="Tasks">
+    <DashBoardLayout activeMenu="Tasks">
       <div className='mt-5'>
         <div className='grid grid-cols-1 md:grid-cols-4 mt-4'>
           <div className='form-card col-span-3'>
@@ -364,7 +364,7 @@ const CreateTask = () => {
           onDelete={() => deleteTask()}
         />
       </Modal>
-    </DashboardLayout >
+    </DashBoardLayout >
   )
 }
 

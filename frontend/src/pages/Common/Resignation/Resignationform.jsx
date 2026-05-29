@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axiosInstance from "../../../utils/axiosInstance";
 import { API_PATHS } from "../../../utils/apiPaths";
 import toast from "react-hot-toast";
-import DashboardLayout from "../../../components/layouts/DashBoardLayout";
+import DashBoardLayout from "../../../components/layouts/DashBoardLayout";
 
 const ResignationForm = () => {
   const navigate = useNavigate();
@@ -45,7 +45,7 @@ const ResignationForm = () => {
     }
   };
   return (
-    <DashboardLayout activeMenu="Resignation">
+    <DashBoardLayout activeMenu="Resignation">
       <div className="mt-6 flex justify-center">
         <div className="form-card w-full max-w-lg p-6">
 
@@ -102,7 +102,7 @@ const ResignationForm = () => {
           </form>
         </div>
       </div>
-    </DashboardLayout>
+    </DashBoardLayout>
   );
 };
 

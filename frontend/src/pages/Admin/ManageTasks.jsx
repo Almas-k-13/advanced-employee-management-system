@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import DashboardLayout from '../../components/layouts/DashBoardLayout';
+import DashBoardLayout from '../../components/layouts/DashBoardLayout';
 import { useNavigate } from 'react-router-dom';
 import axiosInstance from '../../utils/axiosInstance';
 import { API_PATHS } from '../../utils/apiPaths';
@@ -66,7 +66,7 @@ const ManageTasks = () => {
     }
   };
   return (
-    <DashboardLayout activeMenu="Tasks" >
+    <DashBoardLayout activeMenu="Tasks" >
       <div className='my-5'>
         <div className='flex flex-col md:flex-row md:items-center justify-between'>
           <div className='flex items-center justify-between gap-3'>
@@ -119,7 +119,7 @@ const ManageTasks = () => {
 
         </div>
       </div>
-    </DashboardLayout >
+    </DashBoardLayout >
   )
 }
 

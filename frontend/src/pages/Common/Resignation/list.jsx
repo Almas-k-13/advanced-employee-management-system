@@ -5,7 +5,7 @@ import { MoreVertical } from "lucide-react";
 import axiosInstance from "../../../utils/axiosInstance";
 import { API_PATHS } from "../../../utils/apiPaths";
 import toast from "react-hot-toast";
-import DashboardLayout from "../../../components/layouts/DashBoardLayout";
+import DashBoardLayout from "../../../components/layouts/DashBoardLayout";
 
 const List = () => {
   const navigate = useNavigate();
@@ -62,7 +62,7 @@ const List = () => {
   };
 
   return (
-    <DashboardLayout activeMenu="Resignation">
+    <DashBoardLayout activeMenu="Resignation">
       <div className="mt-6">
 
         {/* Header */}
@@ -184,7 +184,7 @@ const List = () => {
         </div>
 
       </div>
-    </DashboardLayout>
+    </DashBoardLayout>
   );
 };
 

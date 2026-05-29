@@ -1,5 +1,5 @@
 import React from "react";
-import DashboardLayout from "../../../components/layouts/DashboardLayout";
+import DashBoardLayout from "../../../components/layouts/DashBoardLayout";
 import axiosInstance from "../../../utils/axiosInstance";
 import { API_PATHS } from "../../../utils/apiPaths";
 import { LuFileDown } from "react-icons/lu";
@@ -37,7 +37,7 @@ const Report = () => {
 
   return (
 
-    <DashboardLayout activeMenu="Reports">
+    <DashBoardLayout activeMenu="Reports">
 
       <div className="my-5">
 
@@ -147,7 +147,7 @@ const Report = () => {
 
       </div>
 
-    </DashboardLayout>
+    </DashBoardLayout>
 
   );
 

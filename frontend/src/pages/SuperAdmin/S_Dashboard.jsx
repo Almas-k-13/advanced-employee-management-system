@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import DashboardLayout from "../../components/layouts/DashBoardLayout";
+import DashBoardLayout from "../../components/layouts/DashBoardLayout";
 import axiosInstance from "../../utils/axiosInstance";
 import { API_PATHS } from "../../utils/apiPaths";
 
@@ -62,7 +62,7 @@ const handleDeleteCompany = async (id) => {
 };
 
   return (
-    <DashboardLayout activeMenu="Dashboard">
+    <DashBoardLayout activeMenu="Dashboard">
 
       <div className="flex-1 p-6">
 
@@ -135,7 +135,7 @@ const handleDeleteCompany = async (id) => {
 
       </div>
 
-    </DashboardLayout>
+    </DashBoardLayout>
   );
 };
 

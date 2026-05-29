@@ -23,7 +23,7 @@ import {
   YAxis,
   CartesianGrid
 } from "recharts";
-import DashboardLayout from '../../components/layouts/DashBoardLayout';
+import DashBoardLayout from '../../components/layouts/DashBoardLayout';
 const COLORS = ["#22c55e", "#ef4444"];
 
 const Dashboard = () => {
@@ -86,7 +86,7 @@ const Dashboard = () => {
     console.log("Bar:", barChartData);
   }, [piChartData, barChartData]);
 
-  return <DashboardLayout activeMenu="Dashboard">
+  return <DashBoardLayout activeMenu="Dashboard">
     <div className="card my-5">
 
       <div>
@@ -232,7 +232,7 @@ const Dashboard = () => {
     </div>
 
 
-  </DashboardLayout>;
+  </DashBoardLayout>;
 
 };
 

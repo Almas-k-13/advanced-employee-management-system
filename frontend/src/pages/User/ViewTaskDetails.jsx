@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import axiosInstance from '../../utils/axiosInstance';
 import { API_PATHS } from '../../utils/apiPaths';
-import DashboardLayout from '../../components/layouts/DashboardLayout';
+import DashBoardLayout from '../../components/layouts/DashBoardLayout';
 import AvatarGroup from '../../components/AvatarGroup';
 import moment from 'moment';
 import { LuSquareArrowOutUpRight } from 'react-icons/lu';
@@ -80,7 +80,7 @@ const ViewTaskDetails = () => {
     return () => { };
   }, [id]);
   return (
-    <DashboardLayout activeMenu='Tasks'>
+    <DashBoardLayout activeMenu='Tasks'>
       <div className="mt-5">
         {task && (
           <div className="grid grid-cols-1 md:grid-cols-4 mt-4">
@@ -168,7 +168,7 @@ const ViewTaskDetails = () => {
           </div>
         )}
       </div>
-    </DashboardLayout >
+    </DashBoardLayout >
   )
 }
 

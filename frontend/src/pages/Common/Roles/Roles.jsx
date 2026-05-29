@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import DashboardLayout from "../../../components/layouts/DashboardLayout";
+import DashBoardLayout from "../../../components/layouts/DashBoardLayout";
 import { Box, Tabs, Tab } from "@mui/material";
 import axiosInstance from "../../../utils/axiosInstance";
 import { API_PATHS } from "../../../utils/apiPaths";
@@ -115,7 +115,7 @@ const Roles = () => {
   };
 
   return (
-    <DashboardLayout activeMenu="Roles">
+    <DashBoardLayout activeMenu="Roles">
 
       <div className="mt-6">
         <div className="form-card p-6">
@@ -196,7 +196,7 @@ const Roles = () => {
         </div>
       </div>
 
-    </DashboardLayout>
+    </DashBoardLayout>
   );
 };
 

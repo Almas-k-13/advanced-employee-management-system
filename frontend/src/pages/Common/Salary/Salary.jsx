@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import axiosInstance from "../../../utils/axiosInstance";
-import DashboardLayout from "../../../components/layouts/DashBoardLayout";
+import DashBoardLayout from "../../../components/layouts/DashBoardLayout";
 
 const Salary = () => {
 
@@ -51,7 +51,7 @@ const Salary = () => {
 
   return (
 
-    <DashboardLayout activeMenu="Salary">
+    <DashBoardLayout activeMenu="Salary">
 
       <div className="min-h-screen bg-slate-100 p-6">
 
@@ -142,7 +142,7 @@ const Salary = () => {
 
       </div>
 
-    </DashboardLayout>
+    </DashBoardLayout>
 
   );
 

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import axiosInstance from "../../../utils/axiosInstance";
 import { API_PATHS } from "../../../utils/apiPaths";
 import { useParams, useNavigate } from "react-router-dom";
-import DashboardLayout from "../../../components/layouts/DashBoardLayout";
+import DashBoardLayout from "../../../components/layouts/DashBoardLayout";
 
 
 const Clockform = () => {
@@ -144,7 +144,7 @@ const Clockform = () => {
 
 
     return (
-        <DashboardLayout activeMenu="Clock In/Out">
+        <DashBoardLayout activeMenu="Clock In/Out">
             <div className="mt-5">
                 <div className="grid grid-cols-1 md:grid-cols-4 mt-4">
                     <div className="form-card col-span-3">
@@ -261,7 +261,7 @@ const Clockform = () => {
                     </div>
                 </div>
             </div>
-        </DashboardLayout>
+        </DashBoardLayout>
     );
 };
 

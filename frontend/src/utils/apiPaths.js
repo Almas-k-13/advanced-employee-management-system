@@ -48,7 +48,7 @@
 // };
 
 
-export const BASE_URL = "http://localhost:8000";
+export const BASE_URL = "https://advanced-employee-management-system.onrender.com";
 
 export const API_PATHS = {
   AUTH: {

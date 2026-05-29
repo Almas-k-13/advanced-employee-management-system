@@ -40,11 +40,11 @@ This application is designed for startups, agencies, enterprises, and organizati
 
 ### Frontend
 
-https://YOUR-FRONTEND-URL.vercel.app
+https://advanced-employee-management-system-chi.vercel.app
 
 ### Backend API
 
-https://YOUR-BACKEND-URL.onrender.com
+https://advanced-employee-management-system.onrender.com
 
 ---
 

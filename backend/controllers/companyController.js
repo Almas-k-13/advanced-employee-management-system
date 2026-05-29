@@ -69,7 +69,15 @@ const createCompany = async (req, res) => {
 
     const company = await Company.create({
       ...companyData,
-      code: companyCode
+      code: companyCode,
+      paymentStatus: "Paid",
+      amount: companyData.amount,
+      razorpayOrderId: companyData.razorpayOrderId,
+      razorpayPaymentId: companyData.razorpayPaymentId,
+      subscriptionStart: new Date(),
+      subscriptionEnd: new Date(
+        Date.now() + 30 * 24 * 60 * 60 * 1000
+      )
     });
 
     const roles = await Role.insertMany([
@@ -176,6 +184,7 @@ Login Now
 
   }
 };
+
 const getAllCompanies = async (req, res) => {
   try {
 

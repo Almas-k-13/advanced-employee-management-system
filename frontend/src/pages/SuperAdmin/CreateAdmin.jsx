@@ -26,6 +26,11 @@ const CreateAdmin = () => {
       password: ""
     }
   });
+  const PLAN_PRICES = {
+    Basic: 499,
+    Pro: 999,
+    Enterprise: 1999
+  };
 
   const validateStep1 = () => {
 
@@ -147,6 +152,80 @@ const CreateAdmin = () => {
         [name]: value
       }
     });
+  };
+
+  const handlePayment = async () => {
+    console.log(import.meta.env.VITE_RAZORPAY_KEY);
+    try {
+      const amount = PLAN_PRICES[plan];
+      const orderRes = await axiosInstance.post(
+        "/api/payment/create-order",
+        {
+          amount
+        }
+      );
+
+
+      const options = {
+        key: import.meta.env.VITE_RAZORPAY_KEY,
+        amount: orderRes.data.amount,
+        currency: "INR",
+        name: "EMS SaaS",
+        description: plan + " Plan",
+        order_id: orderRes.data.id,
+
+        handler: async function (response) {
+          try {
+
+            const payload = {
+              ...formData,
+              amount,
+              razorpayOrderId: response.razorpay_order_id,
+              razorpayPaymentId: response.razorpay_payment_id
+            };
+
+            const res = await axiosInstance.post(
+              API_PATHS.COMPANY.CREATE,
+              payload
+            );
+
+            console.log("Company Create Response:", res);
+
+            if (res.status === 200 || res.status === 201) {
+
+              toast.success(
+                "🎉 Payment Successful & Company Created Successfully!"
+              );
+
+              setTimeout(() => {
+                navigate("/superadmin/company");
+              }, 2000);
+
+            }
+
+          } catch (error) {
+
+            console.log("Create Company Error:", error);
+
+            toast.error(
+              error?.response?.data?.message ||
+              "Company creation failed"
+            );
+
+          }
+        }
+      };
+
+      const razor = new window.Razorpay(options);
+
+      razor.open();
+
+    } catch (err) {
+
+      console.log(err);
+
+      toast.error("Payment Failed");
+    }
   };
 
   const handleSubmit = async () => {
@@ -542,7 +621,7 @@ const CreateAdmin = () => {
               </button>
             ) : (
               <button
-                onClick={handleSubmit}
+                onClick={handlePayment}
                 className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
                 Create Company
               </button>

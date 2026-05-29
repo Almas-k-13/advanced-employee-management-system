@@ -16,6 +16,7 @@ const superAdminAuthRoutes = require("./routes/superAdminAuthRoutes")
 const superAdminRoutes = require("./routes/superAdminRoutes")
 const companyRoutes = require("./routes/companyRoutes");
 const superAdminDashbordRoutes = require("./routes/superAdminDashboardRoutes")
+const paymentRoutes = require("./routes/paymentRoutes");
 
 
 
@@ -56,6 +57,7 @@ app.use("/api/superauthadmin", superAdminAuthRoutes)
 app.use("/api/company",companyRoutes );
 app.use("/api/superadmindashboard", superAdminDashbordRoutes);
 app.use("/api/superadmin", superAdminRoutes);
+app.use("/api/payment", paymentRoutes);
 
 
 // server upload folder

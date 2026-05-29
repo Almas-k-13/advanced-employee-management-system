@@ -27,11 +27,15 @@ const app = express();
 
 //Middleware to handle CORS
 app.use(
-    cors({
-        origin: process.env.CLIENT_URL || "*",
-       methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
-        allowedHeaders: ["Content-Type", "Authorization"],
-    })
+  cors({
+    origin: [
+      process.env.CLIENT_URL,
+      "http://localhost:5173"
+    ],
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
 );
 
 
@@ -42,14 +46,16 @@ connectDb();
 app.use(express.json())
 
 
-
+app.get("/", (req, res) => {
+    res.send("EMS Backend Running Successfully");
+});
 //Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/tasks", taskRoutes);
 app.use("/api/reports", reportRoutes);
 app.use("/api/clock", ClockRouter);
-app.use("/salary", salaryRoutes);
+app.use("api/salary", salaryRoutes);
 app.use("/api/resignation",resignationRoutes );
 app.use("/api/roles", roleRoutes)
 app.use("/api/dashboard", dashboardRoutes);

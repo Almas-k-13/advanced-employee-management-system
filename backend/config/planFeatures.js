@@ -1,3 +1,4 @@
+// plan features
 const PLAN_FEATURES = {
   Basic: ["dashboard", "tasks", "teamMembers", "updateprofile"],
 
